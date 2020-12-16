@@ -1,0 +1,10 @@
+
+
+Rename a folder file starting with 1..
+
+import os
+data = os.path.abspath("data/")
+for i, f in enumerate(os.listdir(data)):
+    src = os.path.join(data, f)
+    dst = os.path.join(data, (str(i + 1)))
+    os.rename(src, dst)
