@@ -8,3 +8,10 @@ for i, f in enumerate(os.listdir(data)):
     src = os.path.join(data, f)
     dst = os.path.join(data, (str(i + 1)))
     os.rename(src, dst)
+    
+    
+listing only the files in unix folders..
+
+list only files
+
+ ls -pv | grep -v /
