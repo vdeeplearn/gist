@@ -14,6 +14,9 @@ listing only the files in unix folders..
 
 list only files
 
- ls -pv | grep -v /
- 
- ls | cut -f 1 -d '.' | sort
+ls -pv | grep -v /
+
+# without the extension
+ls | cut -f 1 -d '.' | sort
+
+ls -pv *.png| cut -f 1 -d '.' > /tmp/png_files.txt
