@@ -1,0 +1,6 @@
+
+ ls -pv *.json| cut -f 1 -d '.' > /tmp/json_files.txt -- without extension...
+
+difference between two files:
+diff -u json_files.txt png_files.txt | grep -E "^\+"
+
