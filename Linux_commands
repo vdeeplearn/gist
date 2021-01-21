@@ -4,3 +4,6 @@
 difference between two files:
 diff -u json_files.txt png_files.txt | grep -E "^\+"
 
+copy files recursively
+find ./ -name *.pdf -exec cp -r {} ./ \;
+
