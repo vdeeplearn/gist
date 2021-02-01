@@ -6,7 +6,10 @@ diff -u json_files.txt png_files.txt | grep -E "^\+"
 
 copy files recursively
 find ./ -name *.pdf -exec cp -r {} ./ \;
+find -maxdepth 1 -name '*.png' -exec cp -t ../data_png {} +   --- long list error
 
 
 listing long directories... ls | grep  '\.txt$' >> textfiles.txt
+:%s/.json$//g
+:%s/.png$//g
 
