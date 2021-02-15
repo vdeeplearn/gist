@@ -1,4 +1,6 @@
 
-Rattle installtion
-install.packages("rattle",dependencies = c("","")
+# Rattle installtion
+
+install.packages("rattle",dependencies = c("Depends","Suggest"))
+library(rattle)
 rattle()
