@@ -1,0 +1,4 @@
+
+Rattle installtion
+install.packages("rattle",dependencies = c("","")
+rattle()
