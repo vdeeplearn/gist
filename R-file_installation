@@ -4,3 +4,9 @@
 install.packages("rattle",dependencies = c("Depends","Suggest"))
 library(rattle)
 rattle()
+
+
+
+https://stackoverflow.com/questions/47377196/r-studio-installing-stringi-fails
+Download windows binary (r-release: stringi_1.1.6.zip) from https://cran.r-project.org/web/packages/stringi/index.html
+Install by > install.packages(".../Downloads/stringi_1.1.6.zip", repos = NULL, type = "source")
