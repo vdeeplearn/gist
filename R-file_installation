@@ -10,3 +10,6 @@ rattle()
 https://stackoverflow.com/questions/47377196/r-studio-installing-stringi-fails
 Download windows binary (r-release: stringi_1.1.6.zip) from https://cran.r-project.org/web/packages/stringi/index.html
 Install by > install.packages(".../Downloads/stringi_1.1.6.zip", repos = NULL, type = "source")
+
+
+https://askubuntu.com/questions/906381/installing-r-in-ubuntu-issue -- r installation in ubuntu
