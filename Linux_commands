@@ -1,3 +1,5 @@
+https://www.itzgeek.com/how-tos/linux/centos-how-tos/install-xrdp-on-centos-7-rhel-7.html  - RDP installation..
+
 
  ls -pv *.json| cut -f 1 -d '.' > /tmp/json_files.txt -- without extension...
 
