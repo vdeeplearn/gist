@@ -16,4 +16,5 @@ df1 = (df.set_index('number')[['id1', 'id2']]
          .reset_index(name='a')
          .drop_duplicates())
          
-         
+
+applying function on a dataframe for each column elements: https://www.geeksforgeeks.org/apply-function-to-every-row-in-a-pandas-dataframe/
