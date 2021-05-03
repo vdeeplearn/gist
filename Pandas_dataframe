@@ -18,3 +18,6 @@ df1 = (df.set_index('number')[['id1', 'id2']]
          
 
 applying function on a dataframe for each column elements: https://www.geeksforgeeks.org/apply-function-to-every-row-in-a-pandas-dataframe/
+
+
+date_ft = date_ft.loc[~date_ft.index.duplicated()]  --- remove duplicate index...
