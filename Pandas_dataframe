@@ -21,3 +21,6 @@ applying function on a dataframe for each column elements: https://www.geeksforg
 
 
 date_ft = date_ft.loc[~date_ft.index.duplicated()]  --- remove duplicate index...
+
+df['col_name'] = np.where(df['col_name'].isnull(), df[col_name1], df[col_name2])
+
