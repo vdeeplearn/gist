@@ -25,3 +25,13 @@ firewall disable...https://www.tecmint.com/disable-selinux-on-centos-8/
 https://www.cyberciti.biz/faq/unable-to-read-consumer-identity-rhn-yum-warning/  - package install issue
 
 https://www.looklinux.com/how-to-mount-samba-share-smbfs-in-linux/ -- smb mount..
+
+Unix Vi replace the same  line
+
+example 
+
+123
+
+123 123
+%s/\(.*\) .*/& \1/
+ 
