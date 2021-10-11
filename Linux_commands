@@ -35,3 +35,6 @@ example
 123 123
 %s/\(.*\) .*/& \1/
  
+ 
+ list only file name in long list
+ #  sudo find ./ -name "*.txt"   -printf "%f\n"  > /tmp/1.txt
