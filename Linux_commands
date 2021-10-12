@@ -39,3 +39,4 @@ example
  list only file name in long list
  #  sudo find ./ -name "*.txt"   -printf "%f\n"  > /tmp/1.txt
  sed -i 's/\\t/ /g' 1230.txt
+ sed '/^$/d' /tmp/data.txt -- empty line removal..
