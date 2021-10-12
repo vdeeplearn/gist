@@ -41,4 +41,5 @@ example
  sed -i 's/\\t/ /g' 1230.txt
  sed '/^$/d' /tmp/data.txt -- empty line removal..
  https://linuxhint.com/use-sed-replace-last-occurrence/--
+ https://linuxhint.com/use_sed_replace_everything/
  
