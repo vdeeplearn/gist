@@ -24,3 +24,33 @@ date_ft = date_ft.loc[~date_ft.index.duplicated()]  --- remove duplicate index..
 
 df['col_name'] = np.where(df['col_name'].isnull(), df[col_name1], df[col_name2])
 
+## read from pandas and insert into a text file
+
+import pandas as pd
+
+# read the text files
+
+# read the data insert name and other details
+import glob
+text_list =glob.glob(r'/home/fraction_customer/data/text/*.txt')
+data = pd.read_csv("1636304076016.txt")
+
+i = 0
+for j  in data.itertuples():
+
+        filename = text_list[i]
+        f = open(filename)
+        text = f.read()
+        f.close()
+        print(text_list[i])
+        string_j = str(j)
+        i += 1
+
+        f = open(filename, 'w')
+        f.write(string_j)
+        f.write(text)
+        f.close()
+        
+        
+
+
