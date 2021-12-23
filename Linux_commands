@@ -47,3 +47,5 @@ example
  
  https://www.baeldung.com/linux/run-cron-job-only-if-not-running
  
+ sudo ip link set <if-name> down
+ 
