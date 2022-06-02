@@ -1,1 +1,6 @@
 https://www.extendoffice.com/excel/formulas/excel-split-text-string-at-specific-character.html -- split function..
+
+Matching with Vlookup.. enter new column next to the long list column named bool..
+
+=IF(ISNA(VLOOKUP(A29,$J$1:$J$55,1,FALSE)),"FALSE","TRUE")
+
