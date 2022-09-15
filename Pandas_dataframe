@@ -51,6 +51,8 @@ for j  in data.itertuples():
         f.write(text)
         f.close()
         
+   
+   ### https://www.youtube.com/user/dataschool --- pandas related youtube channedl
         
 
 
