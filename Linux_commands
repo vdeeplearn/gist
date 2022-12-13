@@ -1,5 +1,16 @@
 https://www.itzgeek.com/how-tos/linux/centos-how-tos/install-xrdp-on-centos-7-rhel-7.html  - RDP installation..
 
+Steps that led to success:
+yum groupremove "Server mit GUI"
+service xrdp stop
+dnf remove xrdp
+reboot
+dnf groupinstall Xfce
+echo "exec /usr/bin/xfce4-session" >> ~/.xinitrc
+sudo systemctl set-default graphical.target
+reboot
+dnf install xrdp
+systemctl enable xrdp --now
 
  ls -pv *.json| cut -f 1 -d '.' > /tmp/json_files.txt -- without extension...
 
