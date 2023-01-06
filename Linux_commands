@@ -60,3 +60,4 @@ example
  
  sudo ip link set <if-name> down
  
+ visudo mismatch-  https://iqcode.com/code/other/polkit-agent-helper-1-error-response-to-policykit-daemon-gdbuserrororgfreedesktoppolicykit1errorfailed-no-session-for-cookie
