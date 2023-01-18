@@ -1,4 +1,5 @@
 https://github.com/NielsRogge/Transformers-Tutorials/blob/master/LayoutLM/Fine_tuning_LayoutLMForTokenClassification_on_FUNSD.ipynb
 https://github.com/NielsRogge/Transformers-Tutorials/blob/master/LayoutLMv3/Fine_tune_LayoutLMv3_on_FUNSD_(HuggingFace_Trainer).ipynb
+https://huggingface.co/datasets/nielsr/funsd-layoutlmv3/blob/main/funsd-layoutlmv3.py#L140
 https://dzone.com/articles/fine-tuning-transformer-model-for-invoice-recognit
 https://www.kaggle.com/code/akarshu121/document-ai-finetuning-1-funsd-on-layoutlmv3
