@@ -1,0 +1,3 @@
+How to troubleshoot a container -- when there is some application issues
+
+ sudo docker run -it --entrypoint /bin/bash ea2c
