@@ -1,2 +1,82 @@
 1. cython-compiler -c -e entry.py
 2. pyinstaller main.spec
+
+
+
+
+# -*- mode: python ; coding: utf-8 -*-
+
+import sys
+import re
+from PyInstaller.utils.hooks import collect_all
+from PyInstaller.utils.hooks import collect_submodules
+# from PyInstaller.utils.hooks import Tree
+def get_mediapipe_path():
+    import mediapipe
+    mediapipe_path = mediapipe.__path__[0]
+    return mediapipe_path
+#site_packages = next(p for p in sys.path if 'site-packages' in p)
+# site_packages = 'C:\\Python38\\lib\site-packages'
+site_packages = 'C:\\Users\\v\\AppData\\Local\\anaconda3\\envs\\p\\Lib\\site-packages'
+
+hiddenimports = ['settings','si']
+hiddenimports += collect_submodules('__required_imports__')
+hiddenimports += collect_submodules('si')
+
+# block_cipher = pyi_crypto.PyiBlockCipher(key='@lRMjoQEc!^W~ut.')
+
+a = Analysis(['entry.py'],
+             pathex=['.', 'C:\\Users\\v\\AppData\\Local\\anaconda3\\envs\\presage38\\Lib\\site-packages\\cv2'],
+             binaries=[],
+             datas=[('p_d/cfg/yo.cfg', '_detection/cfg/'),
+                    ('p_d/weights/bne.pt', 'p_d/weights/'),
+                    ('p_d/classes/classes.txt', 'p_d/classes/'),
+                    (site_packages+'\\p\\models\\ult.onnx','p/models/'),
+                    (site_packages+'\\p\\models\\shaps.dat','p/models/'),
+                    (site_packages+'\\p\\models\\dlib.dat','p/models/'),
+('icons/welcome.png', 'icons/'), ('defaults/config.yml', 'defaults/'), ('fonts/arial-bold.ttf', 'fonts/'), ('fonts/arial.ttf', 'fonts/')],
+             hiddenimports=hiddenimports,
+             hookspath=[],
+             hooksconfig={},
+             runtime_hooks=[],
+             excludes=[],
+             win_no_prefer_redirects=False,
+             win_private_assemblies=False,
+             cipher=None,
+             noarchive=False)
+
+crypto_names = ["_AES", "_ARC4", "_DES", "_DES3", "_SHA256", "_counter", "_C"]
+regex = "("+'|'.join(crypto_names)+")\.cp[0-9][0-9]-win_amd64.pyd"
+for b in a.binaries:
+    found = re.search(regex,b[1])
+    if found:
+        a.binaries.remove(b)
+
+pyz = PYZ(a.pure, a.zipped_data,
+             cipher=None)
+#mediapipe binaries and data
+mediapipe_tree = Tree(get_me_path(), prefix='m', excludes=["*.pyc"])
+a.datas += mediapipe_tree
+a.binaries = filter(lambda x: 'm' not in x[0], a.binaries)
+exe = EXE(pyz,
+          a.scripts,
+          a.binaries,
+          a.zipfiles,
+          a.datas,
+          [('W ignore', None, 'OPTION')],
+          name='project',
+          debug=True,
+          bootloader_ignore_signals=False,
+          strip=False,
+          upx=False,
+          upx_exclude=[],
+          runtime_tmpdir=None,
+          console=True,
+          disable_windowed_traceback=False,
+          target_arch=None,
+          codesign_identity=None,   
+          entitlements_file=None,
+          warn_on_missing_hiddenimports=True,
+          icon="",)
+
+
