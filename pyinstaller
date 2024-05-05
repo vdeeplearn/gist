@@ -1,7 +1,20 @@
 1. cython-compiler -c -e entry.py
 2. pyinstaller main.spec
+y
 
+# main
 
+def mon(''):
+    pass
+
+if __name__ == '__main__':
+    try:
+        mon()
+    except:
+    finally:
+    destroyallwindow.cv2
+    if set.DEBUG
+        sys.exit(0)
 
 
 # -*- mode: python ; coding: utf-8 -*-
