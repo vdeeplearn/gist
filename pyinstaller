@@ -1,0 +1,2 @@
+1. cython-compiler -c -e entry.py
+2. pyinstaller main.spec
